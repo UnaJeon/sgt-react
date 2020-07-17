@@ -8,12 +8,10 @@ class App extends React.Component {
     this.state = { grades: [] };
   }
 
-  /* eslint-disable no-console */
   componentDidMount() {
     fetch('/api/grades')
       .then(res => res.json())
       .then(grades => {
-        console.log(grades);
         this.setState({ grades: grades });
       })
       .catch(error => console.error(error.message));
