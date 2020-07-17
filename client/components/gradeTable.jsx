@@ -13,7 +13,7 @@ function GradeTable(props) {
     );
   });
   return (
-    <table className="table">
+    <table className="table table-striped">
       <thead>
         <tr>
           <td>Name</td>
