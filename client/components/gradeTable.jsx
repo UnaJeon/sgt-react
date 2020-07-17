@@ -13,19 +13,20 @@ function GradeTable(props) {
     );
   });
   return (
-    <table className="table table-striped">
-      <thead>
-        <tr>
-          <td>Name</td>
-          <td>Course</td>
-          <td>Grade</td>
-        </tr>
-      </thead>
-      <tbody>
-        {gradeList}
-      </tbody>
-    </table>
-
+    <div className="table-containter col-8">
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Course</td>
+            <td>Grade</td>
+          </tr>
+        </thead>
+        <tbody>
+          {gradeList}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
