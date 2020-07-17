@@ -28,6 +28,14 @@ class App extends React.Component {
     return average;
   }
 
+  addNewGrade(newGrade) {
+    fetch('/api/grades', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newGrade)
+    });
+  }
+
   render() {
     return (
       <div>
