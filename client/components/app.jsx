@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './header';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,10 +11,11 @@ class App extends React.Component {
   componentDidMount() {
     fetch('/api/grades')
       .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        this.setState({ gardes: data });
-      });
+      .then(grades => {
+        console.log(grades);
+        this.setState({ grades: grades });
+      })
+      .catch(error => console.error(error.message));
   }
 
   render() {
@@ -23,9 +25,4 @@ class App extends React.Component {
   }
 }
 
-function Header() {
-  return (
-    <h1>Student Grade Table</h1>
-  );
-}
 export default App;
