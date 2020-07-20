@@ -34,7 +34,12 @@ class App extends React.Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newGrade)
-    });
+    })
+      .then(res => res.json())
+      .then(grade => {
+        this.setState({ grades: this.state.grades.concat(grade) });
+      })
+      .catch(error => console.error(error.message));
   }
 
   render() {
@@ -43,7 +48,7 @@ class App extends React.Component {
         <Header average={this.getAverageGrade()} />
         <div className="row">
           <GradeTable grades={this.state.grades} />
-          <GradeForm />
+          <GradeForm addNewGrade={this.addNewGrade}/>
         </div>
       </div>
 
