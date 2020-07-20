@@ -10,6 +10,7 @@ class GradeForm extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleChange(event) {
@@ -41,7 +42,7 @@ class GradeForm extends React.Component {
   render() {
     return (
       <div className="form_container col-3">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} onReset={this.handleReset}>
           <div className="input-group mb-3s">
             <span className="input-group-text" ><i className="fa fa-user" aria-hidden="true"></i></span>
             <input name="name" value={this.state.name} type="text" className="form-control" placeholder="Name" onChange={this.handleChange}/>
