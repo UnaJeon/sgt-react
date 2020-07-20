@@ -42,6 +42,24 @@ class App extends React.Component {
       .catch(error => console.error(error.message));
   }
 
+  deleteGrade(gradeId) {
+    fetch(`/api/grades/${gradeId}`, {
+      method: 'DELETE'
+    })
+      .then(res => res.json())
+      .then(grade => {
+        const copyGrades = this.state.grades.slice();
+        const newGrades = [];
+        for (let i = 0; i < copyGrades.length; i++) {
+          if (copyGrades[i].id !== gradeId) {
+            newGrades.push(copyGrades[i]);
+          }
+        }
+        this.setState({ grades: newGrades });
+      })
+      .catch(error => console.error(error.message));
+  }
+
   render() {
     return (
       <div>
