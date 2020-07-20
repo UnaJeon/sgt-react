@@ -1,40 +1,10 @@
 {
   "grades": [
     {
-      "id": 5,
-      "name": "Kyle Simpson",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
       "id": 12,
       "name": "Brendan Eich",
       "course": "JavaScript",
       "grade": 100
-    },
-    {
-      "id": 32,
-      "name": "Douglas Crockford",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "name": "Una Jeon",
-      "course": "JavaScript",
-      "grade": 80,
-      "id": 33
-    },
-    {
-      "name": "John Smith",
-      "course": "Web Development",
-      "grade": 70,
-      "id": 34
-    },
-    {
-      "name": "Una Jeon",
-      "course": "Web",
-      "grade": 80,
-      "id": 35
     }
   ]
 }
