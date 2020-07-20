@@ -27,6 +27,15 @@ class GradeForm extends React.Component {
       course: this.state.course,
       grade: Number(this.state.grade)
     });
+    this.handleReset();
+  }
+
+  handleReset() {
+    this.setState({
+      name: '',
+      course: '',
+      grade: 0
+    });
   }
 
   render() {
